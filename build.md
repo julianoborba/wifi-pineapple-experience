@@ -113,7 +113,7 @@ To meet these requirements in your hard you will have to:
 These dependencies will be installed automatically when the pinapple is connected to the internet and booting.
 <br>
 
-If you want to manually run this process `service wpc-tools missing_packages`
+If you want to manually run this process `service wpc-tools missing_packages` or `opkg update && opkg --dest sd install python-logging python-openssl python-sqlite3 python-codecs`
 <br>
 
 Without these dependencies you will not be able to use the live scan type and some modules.
