@@ -266,7 +266,7 @@ echo "by DSR!"
 echo "******************************"
 echo ""
 
-# apply patchs in order
+# apply patches in order
 common_patch
 if [[ "$ARCHITECTURE" == "mipsel" ]]; then
     mipsel_patch
