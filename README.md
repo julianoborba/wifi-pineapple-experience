@@ -76,7 +76,7 @@ In the [download](https://github.com/xchwarze/wifi-pineapple-cloner-builds) repo
 5. Once installed, the project has a tool that helps us to do several things.
 For example you can use it to change the panel theme with this command:
 ```bash
-service wpc-tools theme_install
+wpc-tools theme_install
 ```
 
 

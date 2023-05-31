@@ -145,7 +145,9 @@ common_patch () {
     echo "[*] Add wpc-tools and service"
 
     cp "$FILES_FOLDER/common/etc/wpc-tools" "$ROOT_FS/etc/init.d/wpc-tools"
+    cp "$FILES_FOLDER/common/usr/wpc-tools" "$ROOT_FS/usr/bin/wpc-tools"
     chmod +x "$ROOT_FS/etc/init.d/wpc-tools"
+    chmod +x "$ROOT_FS/usr/bin/wpc-tools"
 
 
     echo "[*] Other fixs"
