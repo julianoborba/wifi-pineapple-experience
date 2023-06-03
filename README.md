@@ -88,8 +88,10 @@ wpc-tools theme_install
 4. Please support Hak5 work and buy the original hardware!
 
 
-## If you want to collaborate with hardware 
+## Patreon and Tips!
 
-Those who want to help buy testing hardware or just give me a tip, you can do it by sending donations to my binance account:
+Those who want to help buy testing hardware or just give me a tip, you can do it by sending donations to my Binance account.
+I also made a [Patreon](https://www.patreon.com/xchwarze) account where I share private builds and tests.
 
+![patreon] (https://www.patreon.com/xchwarze)
 ![binance-qr](assets/binance-qr.png)
