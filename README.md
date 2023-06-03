@@ -93,5 +93,5 @@ wpc-tools theme_install
 Those who want to help buy testing hardware or just give me a tip, you can do it by sending donations to my Binance account.
 I also made a [Patreon](https://www.patreon.com/xchwarze) account where I share private builds and tests.
 
-[![patreon] (assets/binance-qr.png)](https://www.patreon.com/xchwarze)
+[![patreon](assets/patreon.png)](https://www.patreon.com/xchwarze)
 ![binance-qr](assets/binance-qr.png)
