@@ -64,7 +64,6 @@
 
 
 
-
 # usr
 /usr/bin/pineapple
 /usr/bin/pineap
@@ -72,9 +71,11 @@
 /usr/lib/libwifi.so
 
 /usr/sbin/http_sniffer
-/usr/sbin/log_daemon
 /usr/sbin/pineapd
 /usr/sbin/resetssids
+
+# I understand that this was deprecated and deleted since version 2.1.0...
+#/usr/sbin/log_daemon
 
 
 
