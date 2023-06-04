@@ -63,5 +63,10 @@ do
     fi
 done
 
-echo "[*] Files copied: $COUNTER"
+if [ $COUNTER -eq 0 ]; then
+    echo "[!] No files were copied. Verify that the paths are correct."
+    exit 1
+fi
+
+echo "[+] Files copied: $COUNTER"
 echo ""
