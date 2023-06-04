@@ -91,7 +91,7 @@ wpc-tools theme_install
 ## Patreon and Tips!
 
 Those who want to help buy testing hardware or just give me a tip, you can do it by sending donations to my Binance account.
-I also made a [Patreon](https://www.patreon.com/xchwarze) account where I share private builds and tests.
+I also made a [Patreon](https://www.patreon.com/xchwarze) account where I share private builds and tests. Here you can find updates for the **Pineapple Nano** and builds to **improve stability** on 5g.
 
 [![patreon](assets/patreon.png)](https://www.patreon.com/xchwarze)
 ![binance-qr](assets/binance-qr.png)
