@@ -40,11 +40,16 @@ Also I made a second repo for [downloads](https://github.com/xchwarze/wifi-pinea
 
 
 ## What differences are there with other methods using by firmwares that I can download from the internet?
-All firmwares found on the internet were made with [securityaddicted method](https://www.securityaddicted.com/2016/11/17/weaponizing-gl-inet-gl-ar150/) which is to copy the entire original file system. This besides consuming all the space, was often unstable, so I developed this new method.<br>
-I presented this new method as part of my appearances at EkoParty 2020 and DragonJar 2021. You can see the material from those [presentations here](https://github.com/indetectables-net/embedded).<br>
-In 2021 an [idiot named Samy Younsi](https://github.com/xchwarze/wifi-pineapple-cloner/issues/26) first made a post stealing the method I developed and presented at conferences... months later he ported it to python using the Wifi Pineapple Cloner v1 version and kept sharing it as if it was his work.<br>
-During 2022 I managed to debug the method and how to use it until I was able to port the pineapple to any hardware and have it work 100% like the original.<br>
-So the most elaborate method would be this one that achieves a very low weight in the firmware and a stability equal to the original hardware.<br>
+
+All the firmwares found on the internet have been created using the [securityaddicted method](https://www.securityaddicted.com/2016/11/17/weaponizing-gl-inet-gl-ar150/), which involves duplicating the entire original file system. However, this approach consumes excessive space and often leads to instability. As a result, I have developed a new and improved method.
+
+I introduced this new method method during my presentations at EkoParty 2020 and DragonJar 2021. You can access the materials from those [presentations here](https://github.com/indetectables-net/embedded).
+
+In 2021, an [idiot named Samy Younsi](https://github.com/xchwarze/wifi-pineapple-cloner/issues/26), shamelessly plagiarized the method I had developed and presented at conferences. Months later, he adapted it to Python using the Wifi Pineapple Cloner v1 version and continued spreading it as his own creation.
+
+Throughout 2022, I debugged the method and mastered its usage, enabling me to successfully port the pineapple to any hardware and achieve flawless functionality, identical to that of the original device.
+
+Therefore, the most refined method I have devised not only significantly reduces the firmware's file size but also guarantees stability comparable to the original hardware.<br>
 <br>
 
 
@@ -83,8 +88,11 @@ wpc-tools theme_install
 ## Recomended setup
 
 1. [GL-AR150](https://www.gl-inet.com/products/gl-ar150/) or [GL-AR750S](https://www.gl-inet.com/products/gl-ar750s)
+
 2. USB 2.0 [2 ports hub](https://www.ebay.com/itm/144520475350)
+
 3. Generic [RT5370 WIFI adapter](https://www.ebay.com/itm/284904442887) or [MT7612U WIFI adapter](https://www.ebay.com/itm/175219205235) **you're really going to need this on hardware that doesn't have two wifi adapters**
+
 4. Please support Hak5 work and buy the original hardware!
 
 
