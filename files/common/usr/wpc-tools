@@ -1,16 +1,17 @@
 #!/bin/sh
 # Copyright (C) 2023 DSR!
 
-COMMANDS="format_sd correct_sd_mount missing_packages theme_install change_panel_port change_router_ip handle_lost_phys"
+COMMANDS="format_sd correct_sd_mount missing_packages theme_install set_panel_port set_router_ip set_pineap_interface handle_lost_phys"
 HELP="
 Available commands:
-    format_sd         Format SD/Pendrive
-    correct_sd_mount  Fix ghost pendrive issues
-    missing_packages  Install the missing OpenWRT packages
-    theme_install     Deploys the tool to change panel theme
-    change_panel_port Change the port used by panel
-    change_router_ip  Change the IP used by the hardware
-    handle_lost_phys  Fix unrecognized wifi interfaces
+    format_sd            Format SD/pendrive for use with Pineapple
+    correct_sd_mount     Fix ghost SD/pendrive issues
+    missing_packages     Install the missing OpenWRT packages
+    theme_install        Deploys the tool to change panel theme
+    set_panel_port       Change the port used by panel
+    set_router_ip        Change the IP used by the hardware
+    set_pineap_interface Change the interface used by PineAP 
+    handle_lost_phys     Fix unrecognized wifi interfaces
 "
 PACKAGES="python-logging python-openssl python-sqlite3 python-codecs"
 
@@ -68,10 +69,9 @@ theme_install() {
     /tmp/theme-install.sh "$1"
 }
 
-change_panel_port() {
+set_panel_port() {
     new_port="$1"
     config_file="/etc/nginx/nginx.conf"
-
     if [ -z "$new_port" ] || ! echo "$new_port" | grep -qE '^[1-9][0-9]{0,4}$' || [ "$new_port" -gt 65535 ]; then
         to_logger "[!] Error: You must provide a valid TCP port (1-65535) as a parameter"
         exit 1
@@ -88,9 +88,8 @@ change_panel_port() {
     to_logger "[+] The port has been changed to: $new_port"
 }
 
-change_router_ip() {
+set_router_ip() {
     new_ip="$1"
-
     if [ -z "$new_ip" ] || ! echo "$new_ip" | grep -qE '^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$'; then
         to_logger "[!] Error: You must provide a valid IP address as a parameter"
         exit 1
@@ -103,6 +102,26 @@ change_router_ip() {
 
     to_logger "[+] The LAN IP address has been updated to: $new_ip"
     /etc/init.d/network restart
+}
+
+set_pineap_interface() {
+    new_iface=$(echo $1 | sed 's/mon//')
+    iface=$(uci get pineap.@config[0].pineap_interface | sed 's/mon//')
+    if [[ "$new_iface" == "" ]]; then  
+        to_logger "[!] Error: You must select a new interface to assign to"
+        exit 1
+    fi
+
+    to_logger "[+] Current interface : ${iface}"
+    to_logger "[+] New interface     : ${new_iface}"
+
+    airmon-ng stop "${iface}mon" &>/dev/null 
+    airmon-ng stop "${new_iface}mon" &>/dev/null 
+
+    uci set pineap.@config[0].pineap_interface="${new_iface}mon"
+    uci commit pineap           
+
+    /etc/init.d/pineapd restart
 }
 
 # based on airmon-ng code
