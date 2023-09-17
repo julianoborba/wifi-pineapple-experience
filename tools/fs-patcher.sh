@@ -167,6 +167,7 @@ common_patch () {
     chmod +x "$ROOT_FS/sbin/led"
 
     # add setup support for routers that do not have a reset button but do have wps
+    # this modified the package "hostapd-common" wps button script
     mkdir -p "$ROOT_FS/etc/rc.button"
     cp "$FILES_FOLDER/common/etc/wps" "$ROOT_FS/etc/rc.button/wps"
     chmod +x "$ROOT_FS/etc/rc.button/wps"
