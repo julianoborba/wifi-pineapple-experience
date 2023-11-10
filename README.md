@@ -1,6 +1,8 @@
+Credit the author, see [https://github.com/xchwarze/wifi-pineapple-cloner](https://github.com/xchwarze/wifi-pineapple-cloner) oficial repo.
+
 ![Project Logo](assets/logo.png)
 
-# Wifi Pineapple Cloner v4
+# Wifi Pineapple Experience v4
 
 The Pineapple NANO and TETRA are excellent security hardware but in 2020 they reached their end of life.<br>
 So to give a new life to this platform on modern hardware I developed these scripts to port it to different routers.<br>
@@ -11,7 +13,7 @@ So at the time of redoing this project I decided to rescue the original name fro
 
 ## About this project
 
-This project is the result of everything I've experienced from 2018 to 2022 to successfully clone the NANO and TETRA in any hardware.<br>
+This project is the result of everything I've experienced from 2018 to 2022 to successfully see the NANO and TETRA in any hardware.<br>
 
 For this I've develop:
 * The method of patching the file system with the minimum to be able to work. For this I created the list of files to copy and the script that copies them.
@@ -45,7 +47,7 @@ All the firmwares found on the internet have been created using the [securityadd
 
 I introduced this new method method during my presentations at EkoParty 2020 and DragonJar 2021. You can access the materials from those [presentations here](https://github.com/indetectables-net/embedded).
 
-In 2021, an [idiot named Samy Younsi](https://github.com/xchwarze/wifi-pineapple-cloner/issues/26), shamelessly plagiarized the method I had developed and presented at conferences. Months later, he adapted it to Python using the Wifi Pineapple Cloner v1 version and continued spreading it as his own creation.
+In 2021, an [idiot named Samy Younsi](https://github.com/xchwarze/wifi-pineapple-cloner/issues/26), shamelessly plagiarized the method I had developed and presented at conferences. Months later, he adapted it to Python using the Wifi Pineapple Experience v1 version and continued spreading it as his own creation.
 
 Throughout 2022, I debugged the method and mastered its usage, enabling me to successfully port the pineapple to any hardware and achieve flawless functionality, identical to that of the original device.
 
