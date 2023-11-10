@@ -1,5 +1,7 @@
 Credit the author, see [https://github.com/xchwarze/wifi-pineapple-cloner-v4](https://github.com/xchwarze/wifi-pineapple-cloner-v4) oficial repo. This project is just a fork to experience Wifi Pineapple.
 
+---
+
 ![Project Logo](assets/logo.png)
 
 # Wifi Pineapple Experience v4
